@@ -49,7 +49,7 @@ def get_land_nft_title(token_id):
 # Function to fetch addresses interacting with the NILA contract
 def get_nila_holders():
     latest_block = w3.eth.block_number  # Get latest block number
-    from_block = max(0, latest_block - 100000)  # Limit to last 50,000 blocks
+    from_block = max(0, latest_block - 500000)  # Limit to last 50,000 blocks
 
     event_signature_hash =  '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' #w3.keccak(text="Transfer(address,address,uint256)").hex()
     try:
